@@ -12,6 +12,7 @@ import salvatoreassennato.gestioneEventi.Enum.RuoloUtente;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 @Entity
 @Table(name="utenti")
@@ -29,6 +30,8 @@ public class Utente implements UserDetails {
     private String password;
     @Enumerated(EnumType.STRING)
     private RuoloUtente ruoloUtente;
+    @ManyToMany(mappedBy = "partecipanti")
+    private Set<Evento> eventi;
 
 
     @Override

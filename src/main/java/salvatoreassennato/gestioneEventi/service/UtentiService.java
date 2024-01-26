@@ -5,6 +5,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Service;
 import salvatoreassennato.gestioneEventi.Enum.RuoloUtente;
 import salvatoreassennato.gestioneEventi.entities.Utente;
 import salvatoreassennato.gestioneEventi.exceptions.BadRequestException;
@@ -13,7 +14,7 @@ import salvatoreassennato.gestioneEventi.payloads.UtenteDTO;
 import salvatoreassennato.gestioneEventi.repository.UtentiDAO;
 
 import java.util.UUID;
-
+@Service
 public class UtentiService {
     @Autowired
     private UtentiDAO utentiDAO;
