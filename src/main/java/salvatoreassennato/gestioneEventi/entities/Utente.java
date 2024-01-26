@@ -1,8 +1,18 @@
 package salvatoreassennato.gestioneEventi.entities;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+import salvatoreassennato.gestioneEventi.Enum.RuoloUtente;
+
+import java.util.UUID;
+
+@Getter
+@Setter
+@ToString
 public class Utente {
 
-    private String id;
+    private UUID id;
     private String nome;
     private String cognome;
     private String email;
