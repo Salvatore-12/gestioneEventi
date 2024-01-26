@@ -30,6 +30,7 @@ public class Utente implements UserDetails {
     @Enumerated(EnumType.STRING)
     private RuoloUtente ruoloUtente;
 
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return List.of(new SimpleGrantedAuthority(this.ruoloUtente.name()));
